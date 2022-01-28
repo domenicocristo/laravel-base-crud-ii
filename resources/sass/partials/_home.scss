@@ -1,0 +1,32 @@
+#comics-home {
+    color: #fff;
+    text-align: center;
+}
+
+#comics-home h1 {
+    margin: 20px;
+}
+
+#comics-home ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 5% 0 5%;
+}
+
+#comics-home li {
+    height: 150px;
+    width: calc(100% / 7);
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#comics-home a {
+    color: #202124;
+    text-decoration: none;
+}
