@@ -12,8 +12,8 @@
             @foreach ($comics as $comic)
                 <li>
                     <a href="{{ route('comic', $comic -> id) }}">
-                        <h2>Title - {{ $comic -> title }}</h2>
-                        <h5>Release date - {{ $comic -> releaseDate }}</h5>
+                        <h2>{{ $comic -> title }}</h2>
+                        <h5>{{ $comic -> releaseDate }}</h5>
                     </a>
                 </li>
             @endforeach

@@ -20,6 +20,10 @@ class HomeController extends Controller
         return view('pages.comic', compact('comic'));
     }
 
+    public function create() {
+        return view('pages.create');
+    }
+
     public function store(Request $request) {
 
         $data = $request -> validate([

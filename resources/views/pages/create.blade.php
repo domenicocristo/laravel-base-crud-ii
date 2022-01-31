@@ -25,6 +25,8 @@
         <label for="release_date">Release date:</label>
         <input type="date" name="releaseDate"><br>
         
-        <input type="submit" value="CREATE">
+        <input type="submit" value="CREATE"><br>
+
+        <a href="{{url('/')}}">--> BACK TO HOME <--</a>
     </form>
 @endsection
