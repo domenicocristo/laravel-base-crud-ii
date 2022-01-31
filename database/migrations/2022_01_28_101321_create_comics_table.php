@@ -17,7 +17,7 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
-            $table->date('relaseDate');
+            $table->date('releaseDate');
             $table->timestamps();
         });
     }

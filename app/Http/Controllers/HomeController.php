@@ -19,4 +19,17 @@ class HomeController extends Controller
 
         return view('pages.comic', compact('comic'));
     }
+
+    public function store(Request $request) {
+
+        $data = $request -> validate([
+            'title' => 'required|string|max:255',
+            'author' => 'required|string|max:255',
+            'releaseDate' => 'required|date'
+        ]);
+
+        $comic = Comic::create($data);
+
+        return redirect() -> route('show', $comic -> id);
+    }
 }

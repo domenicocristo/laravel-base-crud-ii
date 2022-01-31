@@ -10,6 +10,6 @@ $factory->define(Comic::class, function (Faker $faker) {
     return [
         'title' => $faker -> name(),
         'author' => $faker -> name(),
-        'relaseDate' => $faker -> date(),
+        'releaseDate' => $faker -> date(),
     ];
 });
