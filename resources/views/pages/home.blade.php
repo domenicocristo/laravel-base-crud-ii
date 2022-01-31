@@ -2,7 +2,11 @@
 @section('content')
     <section id="comics-home">
         <h1>HOME</h1>
-        <a href="{{ route('create') }}">CREATE NEW</a>
+
+        <h3>
+            <a href="{{ route('create') }}">CREATE NEW</a>
+        </h3>
+        
         <h1>LIST COMICS:</h1>
         <ul>
             @foreach ($comics as $comic)

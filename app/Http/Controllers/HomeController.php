@@ -28,8 +28,8 @@ class HomeController extends Controller
             'releaseDate' => 'required|date'
         ]);
 
-        $comic = Comic::create($data);
+        $request = Comic::create($data);
 
-        return redirect() -> route('show', $comic -> id);
+        return redirect() -> route('comic');
     }
 }

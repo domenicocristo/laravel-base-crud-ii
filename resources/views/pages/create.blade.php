@@ -13,9 +13,7 @@
         </div>
     @endif
 
-    <form action="{{ route('update', $comic -> id) }}" method="POST">
-
-        @method("POST")
+    <form action="{{ route('store') }}" method="POST">
         @csrf
 
         <label for="title">Title:</label>
@@ -27,6 +25,6 @@
         <label for="release_date">Release date:</label>
         <input type="date" name="releaseDate"><br>
         
-        <input type="submit" value="UPDATE">
+        <input type="submit" value="CREATE">
     </form>
 @endsection
