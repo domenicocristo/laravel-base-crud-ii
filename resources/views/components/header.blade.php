@@ -1,3 +1,3 @@
 <header>
-    <h1>COMICS</h1>
+    <h1>Comics</h1>
 </header>

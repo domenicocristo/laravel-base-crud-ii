@@ -25,15 +25,40 @@ class HomeController extends Controller
     }
 
     public function store(Request $request) {
-
         $data = $request -> validate([
             'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
             'releaseDate' => 'required|date'
         ]);
 
-        $request = Comic::create($data);
+        $comic = Comic::create($data);
 
-        return redirect() -> route('comic');
+        return redirect() -> route('comic', $comic->id);
+    }
+
+    public function edit($id) {
+        $comic = Comic::findOrFail($id);
+
+        return view('pages.edit', compact('comic'));
+    }
+
+    public function update(Request $request, $id) {
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'author' => 'required|string|max:255',
+            'releaseDate' => 'required|date' 
+        ]);
+
+        $comic = Comic::findOrFail($id);
+        $comic->update($data);
+
+        return redirect()->route('comic', $comic->id);
+    }
+
+    public function delete($id) {
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+
+        return redirect()->route('home');
     }
 }

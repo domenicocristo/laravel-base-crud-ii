@@ -13,8 +13,10 @@
                 <li>
                     <a href="{{ route('comic', $comic -> id) }}">
                         <h2>{{ $comic -> title }}</h2>
-                        <h5>{{ $comic -> releaseDate }}</h5>
                     </a>
+
+                    <a href="{{ route('edit', $comic->id) }}">EDIT</a>
+                    <a href="{{ route('delete', $comic->id) }}">-DELETE</a>
                 </li>
             @endforeach
         </ul>
